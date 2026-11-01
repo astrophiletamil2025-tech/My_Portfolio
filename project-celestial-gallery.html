@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celestial Gallery — Project | Balakrishnan M</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta name="description" content="Celestial Gallery: an astronomy web application built with HTML, CSS and JavaScript, presenting curated celestial objects and information.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="projects">
+<canvas id="starfield" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="brand-mark">&gt;</span> Balakrishnan M</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">About</a></li>
+      <li><a href="projects.html" data-page="projects">Projects</a></li>
+      <li><a href="internship.html" data-page="internship">Internship</a></li>
+      <li><a href="astronomy.html" data-page="astronomy">Astronomy</a></li>
+      <li><a href="experiments.html" data-page="experiments">Experiments</a></li>
+      <li><a href="certifications.html" data-page="certifications">Certifications</a></li>
+      <li><a href="achievements.html" data-page="achievements">Achievements</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <div class="crumb"><a href="projects.html">Projects</a> / Celestial Gallery</div>
+    <span class="kicker">web development</span>
+    <h1>Celestial Gallery</h1>
+    <p>An astronomy web application presenting curated celestial objects and scientific information through organised gallery and information pages.</p>
+    <div class="tags" style="margin-top:14px;"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+  </section>
+
+  <section class="section wrap">
+    <div class="placeholder" style="margin-bottom:44px;">
+      <img class="appcg-screen" src="images/home_page.png">
+     </div>
+
+    <div class="doc-section">
+      <h3>Project overview</h3>
+      <p>Celestial Gallery is a front-end web application I built to present celestial objects — such as planets, stars or nebulae — in an organised, browsable gallery, paired with information pages that explain each object.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>Purpose</h3>
+      <p>I wanted to combine my interest in astronomy with web development practice: structuring content clearly, organising a gallery layout, and presenting scientific information in a way that's easy to browse rather than a wall of text.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>Technologies used</h3>
+      <div class="kv">
+        <div class="kv-row"><dt>HTML</dt><dd>Page structure and content organisation for the gallery and information pages.</dd></div>
+        <div class="kv-row"><dt>CSS</dt><dd>Layout and visual styling for the gallery grid and information sections.</dd></div>
+        <div class="kv-row"><dt>JavaScript</dt><dd>Interactivity within the gallery and information pages.</dd></div>
+      </div>
+    </div>
+
+
+    <div class="doc-section">
+      <h3>Screenshots / gallery</h3>
+      <div class="gallery-grid">
+        <div class="gallery-slot">
+          <img src="images/article.png">
+        </div>
+        <div class="gallery-slot">
+         <img src="images/sidebar-1.png"> 
+        </div>
+        <div class="gallery-slot">
+          <img src="images/sidebar-2.png">
+</div>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h3>What I learned</h3>
+      <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+        <li>Structuring a multi-page website with consistent navigation using plain HTML, CSS and JavaScript.</li>
+        <li>Organising scientific/reference content into a browsable gallery format.</li>
+        <li>Practicing front-end fundamentals without relying on a framework.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+  <h3>Future improvements</h3>
+  <div class="placeholder">
+    <span class="ph-icon">[ roadmap ]</span>
+    <span>
+      I plan to continuously expand Celestial Gallery with new astronomy
+      articles, science news, celestial-object information, and other
+      educational updates, while improving the app's search, organisation,
+      and overall user experience.
+    </span>
+  </div>
+</div>
+
+    <div class="btn-row">
+      <a href="https://app-cg.netlify.app/" class="btn btn-outline">View Celestial Gallery</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p>Balakrishnan M. — ECE student, future astronomer.</p>
+      <p class="footer-note">Built with HTML, CSS &amp; JavaScript. © <span data-year></span></p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

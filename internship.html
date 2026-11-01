@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship — Solar Tracking &amp; Receiving System | Balakrishnan M</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta name="description" content="Def-Space Summer Internship at BSERC: an autonomous solar-energy tracking and receiving system built as a student proof-of-concept inspired by Space-Based Solar Power.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="internship">
+<canvas id="starfield" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="brand-mark">&gt;</span> Balakrishnan M</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    
+      <ul class="nav-links" id="navlinks">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">About</a></li>
+      <li><a href="projects.html" data-page="projects">Projects</a></li>
+      <li><a href="internship.html" data-page="internship">Internship</a></li>
+      <li><a href="astronomy.html" data-page="astronomy">Astronomy</a></li>
+      <li><a href="certifications.html" data-page="certifications">Certifications</a></li>
+      <li><a href="achievements.html" data-page="achievements">Achievements</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <div class="crumb"><a href="projects.html">Projects</a> / Internship</div>
+    <span class="kicker">internship · space technology</span>
+    <h1>Autonomous Solar Tracking &amp; Receiving System</h1>
+    <p>Def-Space Summer Internship — Bharat Space Education Research Centre (BSERC), India — Jun 2026 – Aug 2026</p>
+  </section>
+
+  <section class="section wrap">
+    <div class="placeholder" style="margin-bottom:44px;">
+      <span class="ph-icon">Ptoject View</span>
+      <div>
+        <img class="project-view" src="images/project-view.png" alt="Can't load project view">
+        
+        </div>
+    </div>
+
+    <div class="doc-section">
+      <h3>Important note on scope</h3>
+      <p>
+        The project originated as a student concept during an internship lasting more than six weeks. The physical hardware prototype was developed later, using a microcontroller and commercially available sensors to demonstrate the underlying concept. It was an educational proof-of-concept intended to explore the engineering principles and practical feasibility of the idea, not a functional or space-deployed system.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h3>The problem I was trying to solve</h3>
+      <p>Solar panels and light-receiving systems lose efficiency when they're fixed in place, because the angle between the panel and the light source keeps changing. The problem I explored was: can a small, low-cost system automatically detect the direction of the strongest light and physically turn a panel or receiver to face it, without a person adjusting it manually?</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>Why this is relevant to space technology</h3>
+      <p>The idea of transmitting solar power wirelessly from space to Earth — Space-Based Solar Power (SBSP) — depends on a receiving station on the ground (or another satellite) staying accurately aligned with the incoming energy beam. My project doesn't replicate SBSP itself; it borrows the core alignment problem — automatically finding and tracking a light/energy source — and solves a small, hands-on version of it using sensors and a servo motor. It's a way of engaging with a space-technology concept at a scale that's actually buildable as a student.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>How the system works</h3>
+      <p>Two or more Light Dependent Resistors (LDRs) are positioned around the panel/receiver to sense light intensity from different directions. The Arduino continuously reads the light levels from each LDR and compares them. When the readings are uneven, it means the strongest light isn't hitting the receiver straight-on, so the Arduino sends a signal to a servo motor to rotate the panel toward the LDR that is reading the most light. This repeats continuously, so the system keeps nudging itself back toward alignment as the light source (or the light angle) changes — an automatic, closed-loop tracking behaviour rather than a one-time manual adjustment.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>Components &amp; their role</h3>
+      <div class="kv">
+        <div class="kv-row"><dt>Arduino</dt><dd>The controller/brain of the system — reads sensor values, runs the comparison logic, and sends commands to the servo motor.</dd></div>
+        <div class="kv-row"><dt>LDR sensors</dt><dd>Detect relative light intensity from different directions, giving the Arduino the information needed to know which way to turn.</dd></div>
+        <div class="kv-row"><dt>Servo motor</dt><dd>Physically rotates the panel/receiver toward the direction with the strongest light signal.</dd></div>
+        <div class="kv-row"><dt>Solar panel</dt><dd>Acts as the receiving surface being aligned — standing in for a real energy-receiving element.</dd></div>
+        <div class="kv-row"><dt>Sensor-based alignment logic</dt><dd>The comparison-and-correction loop that turns raw sensor differences into a physical movement decision.</dd></div>
+      </div>
+    </div>
+
+    <div class="doc-grid">
+      <div class="doc-section">
+        <h3>What I learned</h3>
+        <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+          <li>Reading and interpreting analog sensor data (LDRs) with Arduino.</li>
+          <li>Writing control logic that turns sensor comparisons into motor movement.</li>
+          <li>Basic embedded systems and robotics concepts: sensing → decision → actuation.</li>
+          <li>How a real space-technology concept (Space-Based Solar Power) can be explored through a small, buildable analogy.</li>
+        </ul>
+      </div>
+      <div class="doc-section">
+        <h3>Challenges encountered</h3>
+        <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+          <li>Getting stable, noise-free readings from LDR sensors under changing light conditions.</li>
+          <li>Tuning how sensitive the system should be, so it tracks light without jittering back and forth.</li>
+          <li>Calibrating the servo motor's range and response to sensor differences.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h3>Future improvements</h3>
+      <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+        <li>Adding more LDR sensors for finer directional accuracy (e.g. a 2-axis tracking grid).</li>
+        <li>Logging light intensity and panel angle data over time to evaluate tracking performance.</li>
+        <li>Comparing energy captured with tracking on vs. off, to quantify the benefit.</li>
+        <li>Exploring a more robust alignment method beyond simple LDR comparison.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3>Media &amp; documents</h3>
+      <div class="gallery-grid">
+        <div class="gallery-slot">
+          <img class="project-progress" src="images/chassis.png"> 
+       </div>
+        
+        <div class="gallery-slot">       
+          <img class="project-progress" src="images/top_view.png">          
+         </div>
+        
+        <div class="gallery-slot">
+          <img class="project-layout" src="images/block_diagram.png">
+        </div>
+    </div>
+
+    <div class="btn-row">
+      <a href="https://bserc.org/verify/_NE_XXy1vFBYDfPXGE-m0L0N" class="btn btn-outline">Internship certificate (click here)</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p>Balakrishnan M. — ECE student, future astronomer.</p>
+      <p class="footer-note">Built with HTML, CSS &amp; JavaScript. © <span data-year></span></p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

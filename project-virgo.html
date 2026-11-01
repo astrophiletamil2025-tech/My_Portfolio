@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virgo Constellation Data Analysis — Project | Balakrishnan M</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta name="description" content="A small student-level statistical analysis of star population data collected from a Hubble Space Telescope image of the Virgo constellation.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="projects">
+<canvas id="starfield" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="brand-mark">&gt;</span> Balakrishnan M</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="index.html" data-page="home">Home</a></li>
+      <li><a href="about.html" data-page="about">About</a></li>
+      <li><a href="projects.html" data-page="projects">Projects</a></li>
+      <li><a href="internship.html" data-page="internship">Internship</a></li>
+      <li><a href="astronomy.html" data-page="astronomy">Astronomy</a></li>
+      <li><a href="learning.html" data-page="learning">Learning</a></li>
+      <li><a href="experiments.html" data-page="experiments">Experiments</a></li>
+      <li><a href="certifications.html" data-page="certifications">Certifications</a></li>
+      <li><a href="achievements.html" data-page="achievements">Achievements</a></li>
+      <li><a href="science-communication.html" data-page="science">Sci-Comm</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <div class="crumb"><a href="projects.html">Projects</a> / Virgo Constellation Data Analysis</div>
+    <span class="kicker">astronomy data analysis</span>
+    <h1>Virgo Constellation Data Analysis</h1>
+    <p>Visual Star Map &amp; Statistical Analysis, built from a small dataset collected from a Hubble Space Telescope image of the Virgo constellation.</p>
+    <div class="tags" style="margin-top:14px;"><span class="tag">Excel</span><span class="tag">Matplotlib</span></div>
+  </section>
+
+  <section class="section wrap">
+    <div class="placeholder" style="margin-bottom:44px;">
+      <span class="ph-icon">[ scope note ]</span>
+      This was a small, student-level dataset derived from a single image — not a scientific survey or a professional research dataset. Results and observations below should be read at that scale.
+    </div>
+
+    <div class="doc-section">
+      <h3>Project motivation</h3>
+      <p>I wanted hands-on practice with real astronomical imagery and basic data analysis, rather than only reading about how astronomers work with star data. Using an image of the Virgo constellation captured by the Hubble Space Telescope gave me a concrete, real source to build a small dataset from and practice statistics on.</p>
+    </div>
+
+    <div class="doc-section">
+      <h3>Source image</h3>
+      <div class="placeholder">
+        <img src="images/heic0815i.jpg" alt="can't load image">
+      </div>
+    </div>
+
+    <div class="doc-grid">
+      <div class="doc-section">
+        <h3>Data collection method</h3>
+        <p>Stars visible in the source image were identified and their approximate properties (such as position and relative brightness) were recorded manually into a spreadsheet, forming a small, hand-collected dataset rather than an automated survey extraction.</p>
+      </div>
+      <div class="doc-section">
+        <h3>Dataset</h3>
+        <div class="placeholder">
+          <a href="assets/docs/data.xlsx">Download Excel File</a>
+         </div>
+        
+      </div>
+    </div>
+
+
+    <div class="doc-grid">
+      <div class="doc-section">
+        <h3>Excel analysis</h3>
+        <p>Basic statistical summaries and organisation of the star dataset were carried out in Microsoft Excel.</p>
+      </div>
+      <div class="doc-section">
+        <h3>Matplotlib visualisations</h3>
+        <p>Matplotlib was used to visualise the star data, including a visual star map representation.</p>
+        <div class="gallery-grid" style="margin-top:12px;">
+          <div class="gallery-slot">
+            <img src="assets/docs/data_points.png">
+          </div>
+          <div class="gallery-slot">
+            <img src="assets/docs/statistical_chart.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h3>Statistical observations &amp; results</h3>
+      <div class="placeholder">
+        <section class="doc-section">
+  <h3>Observation</h3>
+
+  <ul style="color:var(--text-muted); padding-left:18px; margin:0;">
+    <li>The dataset contains 100 detected sources from the image.</li>
+    <li>The integrated brightness-excess values range from approximately 1,572 to 26,355.</li>
+    <li>Most detected sources have relatively lower brightness-excess values.</li>
+    <li>The mean value (5,466.9) is higher than the median (3,252.0), indicating a right-skewed distribution.</li>
+    <li>A small number of sources show substantially higher values than the majority.</li>
+  </ul>
+</section>
+
+
+<section class="doc-section">
+  <h3>Results</h3>
+
+  <p>
+    The statistical analysis shows that the detected sources are not uniformly
+    distributed in brightness. Most sources have relatively low integrated
+    brightness-excess values, while a smaller number of stronger detections
+    contribute significantly to the mean.
+  </p>
+
+  <p>
+    Overall, the histogram indicates a positively skewed distribution with a
+    small number of high-value sources. These measurements represent image-based
+    detection values and should not be interpreted as calibrated astronomical
+    luminosities or distances.
+  </p>
+</section>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h3>Limitations</h3>
+      <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+        <li>The dataset was manually collected from a single image, so it's small and not a substitute for a proper astronomical catalogue.</li>
+        <li>Measurements of position and brightness are approximate, not instrument-calibrated.</li>
+        <li>The analysis is a student exercise in applying statistics to real imagery, not a scientific research finding.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h3>What I learned</h3>
+      <ul style="color:var(--text-muted);padding-left:18px;margin:0;">
+        <li>How to turn a real astronomical image into a structured, analysable dataset.</li>
+        <li>Practical Excel skills for organising and summarising data.</li>
+        <li>Using Matplotlib to visualise spatial and statistical data.</li>
+        <li>Being careful about the difference between a small illustrative dataset and a scientifically rigorous one.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p>Balakrishnan M. — ECE student, future astronomer.</p>
+      <p class="footer-note">Built with HTML, CSS &amp; JavaScript. © <span data-year></span></p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
