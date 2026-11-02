@@ -53,6 +53,12 @@
       var setOpen = function (open) {
         links.classList.toggle('open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if(toggle.textContent == "Menu"){
+          toggle.innerHTML = '<p class="crossmark">&times</p>';
+        }
+        else{
+          toggle.innerHTML = "Menu";
+        }
       };
 
       toggle.addEventListener('click', function () {
